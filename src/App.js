@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Slides from "./components/Slides";
+import Navbar from "./components/Navbar";
 
 function App() {
+  const slides = [
+    {
+      title: "Today's workout plan",
+      text: "We're gonna do 3 fundamental exercises",
+    },
+    { title: "Today's workout plan 1", text: "doing Exercise 1" },
+    { title: "Today's workout plan 2", text: "doing Exercise 2" },
+    { title: "Today's workout plan 3", text: "doing Exercise 3" },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Slides slides={slides} />
     </div>
   );
 }
